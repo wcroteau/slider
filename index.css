@@ -1,0 +1,55 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slidecont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.list {
+  width: 300px;
+  overflow: hidden;
+}
+
+.items {
+  position: relative;
+  display: flex;
+  transition: all 0.5s ease-out;
+  left: 0px;
+}
+
+.buttons > button {
+  padding: 0.25rem;
+}
+
+.dots {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  outline: 1px solid black;
+  outline-offset: 1px;
+}
+
+.active .dot {
+  background-color: rebeccapurple;
+}

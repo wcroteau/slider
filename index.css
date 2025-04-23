@@ -8,12 +8,13 @@
 
 .slidecont {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
   gap: 2rem;
 }
 
 .slider {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,11 +33,38 @@
   left: 0px;
 }
 
-.buttons > button {
+/* .buttons > button {
   padding: 0.25rem;
+} */
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #aaa3;
+  color: #ccc;
+  border: 1px solid #eee;
+}
+
+button:hover {
+  background-color: #aaa8;
+  color: #fff;
+}
+
+button.prev {
+  left: 0.5rem;
+}
+
+button.next {
+  right: 0.5rem;
 }
 
 .dots {
+  position: absolute;
+  bottom: 0.6rem;
   display: flex;
   gap: 1rem;
   list-style: none;
@@ -46,10 +74,10 @@
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
-  outline: 1px solid black;
+  outline: 1px solid #eee;
   outline-offset: 1px;
 }
 
 .active .dot {
-  background-color: rebeccapurple;
+  background-color: #eee;
 }
